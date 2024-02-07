@@ -1,0 +1,53 @@
+@use "../variables.scss" as var;
+
+// container do footer
+footer {
+    display: flex;
+    width: 100%;
+    margin-bottom: -24px;
+    background-color: var.$primary;
+    justify-content: space-around;
+    align-items: center;
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+
+    .name {
+        position: relative;
+        left: -10%;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .text {
+        position: relative;
+        right: -15%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    @media(max-width:1350px) {
+        .name {
+            position: relative;
+            left: -8%;
+        }
+
+        .text {
+            right: -8%;
+        }
+    }
+
+    @media(max-width:980px) {
+        .name {
+            position: relative;
+            left: -4%;
+        }
+
+    }
+
+    @media (max-width: 691px) {
+        display: none;
+    }
+
+}

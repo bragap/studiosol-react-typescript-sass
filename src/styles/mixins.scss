@@ -1,0 +1,13 @@
+@use "./variables.scss" as var;
+
+@mixin hover {
+    &:hover {
+        color: var.$primary;
+        cursor: pointer;
+    }
+}
+
+@mixin navbar-p {
+    margin-left: 10px;
+    font-weight: 800;
+}

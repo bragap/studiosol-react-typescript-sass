@@ -1,0 +1,78 @@
+@use "../variables.scss" as var;
+
+// container geral
+#container {
+    @media (min-width: 691px) {
+        display: none;
+    }
+
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+
+    #components {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+
+        .home {
+            color: var.$primary;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #home-svg {
+                font-size: 30px;
+            }
+
+            p {
+                margin-top: 5px;
+            }
+        }
+
+        .sear {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            svg {
+                font-size: 30px;
+            }
+
+            p {
+                margin-top: 5px;
+            }
+        }
+
+        .favs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            svg {
+                font-size: 30px;
+            }
+
+            p {
+                margin-top: 5px;
+            }
+        }
+
+        .add {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            svg {
+                font-size: 30px;
+            }
+
+            p {
+                margin-top: 5px;
+            }
+        }
+    }
+
+}

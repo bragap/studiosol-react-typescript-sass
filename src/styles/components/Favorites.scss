@@ -1,0 +1,88 @@
+@use '../variables.scss' as var;
+@use "../mixins.scss" as mixins;
+
+// Meus livros e Emprestados
+#menu {
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var.$border-color;
+
+    #books {
+        text-decoration: none;
+        color: var.$text-color;
+        font-weight: bold;
+        margin: 15px;
+        padding-bottom: 10px;
+        border-bottom: 5px solid var.$primary;
+        border-radius: 3px;
+    }
+
+    #emprestados {
+        text-decoration: none;
+        color: var.$text-color;
+        font-weight: bold;
+        margin: 10px;
+        transition: var.$transitions;
+
+        &:hover {
+            padding-bottom: 10px;
+            border-bottom: 5px solid var.$primary;
+            border-radius: 3px;
+        }
+    }
+}
+
+
+// Livros favoritos e ver todos
+#header {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+
+    #favs {
+        width: 80%;
+
+        p {
+            font-size: var.$font-size-title;
+            font-weight: bold;
+
+            @media (max-width:690px) {
+                font-size: 1.7em;
+            }
+
+            @media (max-width:530px) {
+                font-size: 1.3em;
+            }
+
+            @media(max-width:430px) {
+                font-size: 1.1em;
+            }
+        }
+
+        @media(max-width: 530px) {
+            width: 70%;
+        }
+
+        @media(max-width: 430px) {
+            width: 60%;
+
+        }
+    }
+
+    #ver-todos {
+        display: flex;
+        width: 20%;
+        color: var.$primary;
+        font-weight: bold;
+        justify-content: end;
+        cursor: pointer;
+
+        @media(max-width: 530px) {
+            width: 30%;
+            font-size: 0.9em;
+        }
+    }
+}
+
+

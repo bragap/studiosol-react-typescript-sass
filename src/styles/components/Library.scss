@@ -1,0 +1,163 @@
+@use "../variables.scss" as var;
+
+// titulo da biblioteca
+#title-biblioteca {
+
+    font-weight: bold;
+    font-size: var.$font-size-title;
+
+}
+
+// navbar da biblioteca
+#nav-biblioteca {
+    display: flex;
+    justify-content: start;
+
+    @media(max-width: 600px) {
+        overflow: hidden;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin-left: -39px;
+
+        @media(max-width: 600px) {
+            ul {
+                margin-left: -45px;
+                font-size: 0.8em;
+            }
+        }
+
+        @media(max-width: 400px) {
+            ul {
+                margin-left: -45px;
+                font-size: 0.7em;
+            }
+        }
+    }
+
+    .active {
+        background-color: var.$primary;
+        border: 1px solid var.$primary ;
+        color: #fff;
+    }
+
+    li {
+        margin-right: 15px;
+        padding: 10px 15px;
+        border-radius: 40px;
+        border: 2px solid var.$border-color;
+        color: var.$text-color;
+        font-weight: 500;
+        transition: var.$transitions;
+
+        &:hover {
+            background-color: var.$primary;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+}
+
+// exibição de livros da biblioteca
+
+#painel-biblioteca {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 800px){
+        margin-bottom: 100px;
+    }
+
+    #book {
+        display: flex;
+        margin-bottom: 25px;
+        margin-right: 10px;
+        width: 30%;
+
+        @media (max-width:1500px) {
+            width: 40%;
+        }
+
+        @media (max-width:1250px) {
+            width: 45%;
+        }
+
+        @media (max-width:1000px) {
+            width: 100%;
+        }
+        
+    }
+
+    .book-image {
+        width: 30%;
+        height: 230px;
+
+        @media (min-width:1501px) and (max-width:1650px) {
+            width: 40%;
+            height: 200px;
+        }
+
+        @media (max-width:1500px) {
+            width: 30%;
+            height: 200px;
+        }
+
+        @media (min-width:1001px) and (max-width:1499px) {
+            width: 38%;
+
+        }
+
+        @media (max-width:1000px) {
+            width: 20%;
+        }
+
+        @media (max-width:700px) {
+            width: 25%;
+        }
+
+        @media (max-width:500px) {
+            width: 35%;
+            height: 150px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    .book-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        @media (max-width:1000px) {
+            width: 60%;
+            height: 230px;
+        }
+
+        p {
+            padding-left: 10px;
+        }
+
+        #book-name-bi {
+            font-weight: bold;
+        }
+    }
+}
+
+
+#container-down{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px 0;
+    margin-top: 10px;
+
+}

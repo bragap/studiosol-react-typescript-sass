@@ -1,0 +1,41 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss" as mix;
+
+// scroll suave
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    color: var.$text-color;
+    background-color: var.$body-color;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    &::-webkit-scrollbar {
+        width: 0.4em;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #F5F5F7;
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color: var.$primary;
+      }
+}
+
+#app-section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+// todos os links
+a {
+    text-decoration: none;
+    color: var.$text-color;
+    transition: var.$transitions;
+
+    &:hover {
+        @include mix.hover;
+    }
+}
+

@@ -1,0 +1,157 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss" as mixins;
+
+// container da navbar
+#navbar {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    background-color: #fff;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px 0;
+    border-bottom: 1px solid var.$border-color;
+
+    
+
+    svg {
+        cursor: pointer;
+        transition: var.$transitions;
+        @include mixins.hover;
+    }
+
+    span {
+        color: var.$primary;
+        user-select: none;
+    }
+    h2{
+        user-select: none;
+    }
+
+    p {
+        transition: var.$transitions;
+        @include mixins.navbar-p;
+        @include mixins.hover;
+    }
+}
+
+// container da busca
+.search {
+    width: 40%;
+    display: flex;
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var.$border-color;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    svg {
+        margin-left: -30px;
+        align-self: center;
+    }
+
+    @media (max-width:690px) {
+        display: none;
+    }
+
+    @media (max-width:1160px) {
+        display: none;
+    }
+
+    @media (max-width:1350px) {
+        width: 30%;
+
+    }
+
+    @media (max-width:1150px) {
+        width: 25%;
+    }
+
+    @media(max-width:950px) {
+        h2 {
+            font-size: 1.2em;
+        }
+
+        font-size: 0.7em;
+
+    }
+}
+
+// container de adicionar
+
+.adicionar {
+    display: flex;
+    align-items: center;
+
+    @media (max-width:690px) {
+        display: none;
+    }
+
+    @media (max-width:1350px) {
+
+        width: 15%;
+        font-size: 0.9em;
+    }
+
+    @media (max-width:1160px) {
+        display: none;
+    }
+}
+
+// container de favoritos
+.favoritos {
+    display: flex;
+    align-items: center;
+
+    @media (max-width:690px) {
+        display: none;
+    }
+
+    @media (max-width:1160px) {
+        display: none;
+    }
+
+    @media (max-width:1350px) {
+
+        width: 15%;
+        font-size: 0.9em;
+    }
+}
+
+// container de perfil
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    p {
+        @media (max-width:690px) {
+            display: none;
+        }
+
+        @media (max-width:1160px) {
+            display: none;
+        }
+
+    }
+
+    @media (max-width:1350px) {
+        width: 15%;
+        font-size: 0.9em;
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width:1000px) {
+        width: 30%;
+        
+    }
+}
